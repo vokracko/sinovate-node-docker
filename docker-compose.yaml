@@ -1,0 +1,12 @@
+version: "2"
+services:
+  node:
+    build:
+      context: .
+    image: sinovate
+    restart: always
+    ports:
+      - 20970:20970
+    volumes:
+      - ./data:/root/.sin
+      - ./sin.conf:/root/sin.conf
